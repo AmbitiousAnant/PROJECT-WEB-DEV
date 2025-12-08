@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PINTEREST(Copy)</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            overflow: hidden;
+            /* Fix body scroll */
+        }
+
+        .container {
+            background-color: whitesmoke;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "Nav Item2";
+            grid-template-rows: 80px 1fr;
+            grid-template-columns: 200px 1fr;
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: red;
+            color: white;
+            font-size: 36px;
+            border-bottom: 3px solid red;
+            padding: 20px;
+        }
+
+
+
+        .Item2 {
+            grid-area: Item2;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            overflow-y: auto;
+            /* Enable vertical scroll */
+            height: 100%;
+            /* Ensure it fills grid cell */
+        }
+
+        .genre-nav {
+            grid-area: Nav;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            padding: 20px 10px;
+        }
+
+        .genre-section {
+            margin-bottom: 40px;
+        }
+
+        .genre-section h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 15px;
+        }
+
+        .grid-item {
+            break-inside: avoid;
+            margin-bottom: 15px;
+            border-radius: 16px;
+            background-color: #eee;
+        }
+
+        .grid-item img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            transition: transform 0.2s;
+        }
+
+        .genre-user {
+            background-color: transparent;
+            padding: 12px 20px;
+            border-radius: 24px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            width: 80%;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Tablet Responsive (max-width: 768px) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "Nav"
+                    "Item2";
+                grid-template-rows: auto auto 1fr;
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .header {
+                font-size: 28px;
+                padding: 15px;
+            }
+
+            .genre-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 10px;
+                justify-content: flex-start;
+                border-bottom: 1px solid #ddd;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .genre-nav h3 {
+                display: none;
+                /* Hide 'Genres' title on mobile to save space */
+            }
+
+            .genre-user {
+                width: auto;
+                padding: 8px 16px;
+                background-color: #eee;
+                /* Light background for pills */
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+
+            .Item2 {
+                padding: 20px;
+                border-radius: 0;
+            }
+
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        /* Mobile Responsive (max-width: 480px) */
+        @media (max-width: 480px) {
+            .header {
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">PINTEREST</div>
+
+        <div class="genre-nav">
+            <h3 style="margin-bottom: 20px; font-size: 20px; color: #333;">Genres</h3>
+            <a href="#Cars" class="genre-user">Cars</a>
+            <a href="#Nature" class="genre-user">Nature</a>
+            <a href="#Architecture" class="genre-user">Architecture</a>
+            <a href="#Travel" class="genre-user">Travel</a>
+            <a href="#Art" class="genre-user">Art</a>
+            <a href="#Food" class="genre-user">Food</a>
+            <a href="#Fashion" class="genre-user">Fashion</a>
+        </div>
+        <div class="Item2">
+
+            <div id="Cars" class="genre-section">
+                <h3>Cars</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/3c/87/0c/3c870c987fc64a559fc254505084b88b.jpg" alt="Car 1">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/2e/e3/a7/2ee3a78439083b90419952cfb28be12c.jpg" alt="Car 2">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/3d/4a/cf/3d4acf3a7fc3095313d2e3808d072fcd.jpg" alt="Car 3">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/07/00/90/070090ec8206c79a6e783c5166c5e7dc.jpg" alt="Car 4">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Nature" class="genre-section">
+                <h3>Nature</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/69/81/c2/6981c251f5c5b623f800b011553762e3.jpg"
+                            alt="Nature 1"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/28/d9/d6/28d9d65ba16679d6366393642f15a011.jpg"
+                            alt="Nature 2"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/02/59/69/0259699a168aea21ba838cd4873a1fdc.jpg"
+                            alt="Nature 3"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/6d/dd/fa/6dddfad99e612c9bce3dad8ac60f2354.jpg"
+                            alt="Nature 4"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/33/63/96/336396bd6071e0b4afd57b1a198679f7.jpg"
+                            alt="Nature 5"></div>
+                </div>
+            </div>
+
+            <div id="Architecture" class="genre-section">
+                <h3>Architecture</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/fc/e3/fd/fce3fd5e9bf49df79265157cc3943997.jpg" alt="Arch 1">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/5a/19/27/5a1927b82edbeaa03259717e7b7b2deb.jpg" alt="Arch 2">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/92/49/ab/9249abae46349ddbf6b9f49051ede781.jpg" alt="Arch 3">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Travel" class="genre-section">
+                <h3>Travel</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/82/0f/a7/820fa7d61221505a529323b7d54e0ad4.jpg"
+                            alt="Travel 1"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/cf/80/60/cf8060f1213f30db7a57bb58fd0e8b0c.jpg"
+                            alt="Travel 2"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/66/f4/1e/66f41e6057bc11e8e97b914eae1f344a.jpg"
+                            alt="Travel 3"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/90/35/9a/90359afd608b1d1b0abe270336fd727f.jpg"
+                            alt="Travel 4"></div>
+                </div>
+            </div>
+            <div id="Art" class="genre-section">
+                <h3>Art</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/ff/99/5a/ff995a85abcbe393e36a658598fcab2f.jpg" alt="Art 1">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/ae/b2/61/aeb261694a26a7af97817377ecfabbaa.jpg" alt="Art 2">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/eb/16/68/eb1668d6eba774864825ae26bdf66148.jpg" alt="Art 3">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Food" class="genre-section">
+                <h3>Food</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/1200x/7f/6d/3e/7f6d3ebdca842e61864b698a277c5418.jpg" alt="Food 1">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/04/b1/5a/04b15a8649e5dfe5eff8c5921ac3fa1a.jpg" alt="Food 2">
+                    </div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/12/33/b9/1233b91540a1f7ceecce09342376c8fc.jpg" alt="Food 3">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Fashion" class="genre-section">
+                <h3>Fashion</h3>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/da/09/f7/da09f751ceca476b80aadc63090637e5.jpg"
+                            alt="Fashion 1"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/0a/7e/78/0a7e78c0ed5953f100f37ae91579cda1.jpg"
+                            alt="Fashion 2"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/75/03/63/750363d734d476db17db23abbd05feb6.jpg"
+                            alt="Fashion 3"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/c1/8d/b0/c18db0b3e59cd9701528c314793ad61e.jpg"
+                            alt="Fashion 4"></div>
+                    <div class="grid-item"><img
+                            src="https://i.pinimg.com/736x/08/2c/d4/082cd4a8cc018a32693b2af2ce896707.jpg"
+                            alt="Fashion 5"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
