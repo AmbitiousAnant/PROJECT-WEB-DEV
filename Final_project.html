@@ -15,7 +15,7 @@
                         width: 100%;
                         margin: 0;
                         overflow: hidden;
-                        /* Fix body scroll */
+                        /* Fix body scroll,out of syllabus new concept */
                 }
 
                 .container {
@@ -108,7 +108,6 @@
                         object-fit: cover;
                         display: block;
                         border-radius: 16px;
-                        transition: transform 0.2s;
                 }
 
 
@@ -118,7 +117,6 @@
                         padding: 12px 20px;
                         border-radius: 24px;
                         font-weight: 600;
-                        transition: background-color 0.2s;
                         width: 80%;
                         text-align: center;
                         color: #333;
@@ -186,6 +184,67 @@
                         }
                 }
         </style>
+        <style>
+                /* Window Styles */
+                .window {
+                        display: none;
+                        position: fixed;
+                        z-index: 1000;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        backdrop-filter: blur(5px);
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .window-content {
+                        background-color: #fff;
+                        border-radius: 32px;
+                        width: 90%;
+                        max-width: 1000px;
+                        height: 80%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+                        transform: scale(0.9);
+                }
+
+                /*out of syllabus new concept*/
+                .close-btn {
+                        position: absolute;
+                        top: 20px;
+                        right: 30px;
+                        font-size: 20px;
+                        font-family: 'Inter', sans-serif;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: #fff;
+                        z-index: 1001;
+                }
+
+
+
+
+                .window-iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                }
+
+                .window:target {
+                        display: flex;
+                        pointer-events: auto;
+                }
+
+                .window:target .window-content {
+                        transform: scale(1);
+                }
+        </style>
 
 </head>
 
@@ -208,155 +267,536 @@
                         <div id="Cars" class="genre-section">
                                 <h3>Cars</h3>
                                 <div class="masonry-grid">
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/3c/87/0c/3c870c987fc64a559fc254505084b88b.jpg"
-                                                        alt="Car 1">
+                                        <!-- Car 1 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-1">
+                                                        <img src="https://i.pinimg.com/736x/3c/87/0c/3c870c987fc64a559fc254505084b88b.jpg"
+                                                                alt="Car 1">
+                                                </a>
+                                                <div id="window-car-1" class="window">
+
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 1 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/2e/e3/a7/2ee3a78439083b90419952cfb28be12c.jpg"
-                                                        alt="Car 2">
+                                        <!-- Car 2 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-2">
+                                                        <img src="https://i.pinimg.com/736x/2e/e3/a7/2ee3a78439083b90419952cfb28be12c.jpg"
+                                                                alt="Car 2">
+                                                </a>
+                                                <div id="window-car-2" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 2 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/3d/4a/cf/3d4acf3a7fc3095313d2e3808d072fcd.jpg"
-                                                        alt="Car 3">
+                                        <!-- Car 3 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-3">
+                                                        <img src="https://i.pinimg.com/736x/3d/4a/cf/3d4acf3a7fc3095313d2e3808d072fcd.jpg"
+                                                                alt="Car 3">
+                                                </a>
+                                                <div id="window-car-3" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 3 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/07/00/90/070090ec8206c79a6e783c5166c5e7dc.jpg"
-                                                        alt="Car 4">
+                                        <!-- Car 4 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-4">
+                                                        <img src="https://i.pinimg.com/736x/07/00/90/070090ec8206c79a6e783c5166c5e7dc.jpg"
+                                                                alt="Car 4">
+                                                </a>
+                                                <div id="window-car-4" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 4 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/1200x/1e/32/1f/1e321f316e433e109d8f7f32162bd29e.jpg"
-                                                        alt="Car 5">
+                                        <!-- Car 5 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-5">
+                                                        <img src="https://i.pinimg.com/1200x/1e/32/1f/1e321f316e433e109d8f7f32162bd29e.jpg"
+                                                                alt="Car 5">
+                                                </a>
+                                                <div id="window-car-5" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 5 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/01/bf/aa/01bfaae463e3f55a50b78f710afa096e.jpg"
-                                                        alt="Car 6">
+                                        <!-- Car 6 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-6">
+                                                        <img src="https://i.pinimg.com/736x/01/bf/aa/01bfaae463e3f55a50b78f710afa096e.jpg"
+                                                                alt="Car 6">
+                                                </a>
+                                                <div id="window-car-6" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 6 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/1200x/4c/90/3b/4c903b4abe1e775baa53e1f640356c33.jpg"
-                                                        alt="Car 7">
+                                        <!-- Car 7 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-7">
+                                                        <img src="https://i.pinimg.com/1200x/4c/90/3b/4c903b4abe1e775baa53e1f640356c33.jpg"
+                                                                alt="Car 7">
+                                                </a>
+                                                <div id="window-car-7" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 7 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/cf/db/13/cfdb1344b710702ed80ceb62a97a36e8.jpg"
-                                                        alt="Car 8">
+                                        <!-- Car 8 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-8">
+                                                        <img src="https://i.pinimg.com/736x/cf/db/13/cfdb1344b710702ed80ceb62a97a36e8.jpg"
+                                                                alt="Car 8">
+                                                </a>
+                                                <div id="window-car-8" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 8 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/71/fe/5f/71fe5f1c1756717b2d069ed65329378a.jpg"
-                                                        alt="Car 9">
+                                        <!-- Car 9 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-9">
+                                                        <img src="https://i.pinimg.com/736x/71/fe/5f/71fe5f1c1756717b2d069ed65329378a.jpg"
+                                                                alt="Car 9">
+                                                </a>
+                                                <div id="window-car-9" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 9 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/c7/3d/3a/c73d3a9415ef72d4b6a0d3efe795c4c3.jpg"
-                                                        alt="Car 10">
+                                        <!-- Car 10 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-10">
+                                                        <img src="https://i.pinimg.com/736x/c7/3d/3a/c73d3a9415ef72d4b6a0d3efe795c4c3.jpg"
+                                                                alt="Car 10">
+                                                </a>
+                                                <div id="window-car-10" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 10 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/736x/c6/61/e4/c661e42736b6da5748353a0d74f8dcf1.jpg"
-                                                        alt="Car 11">
+                                        <!-- Car 11 -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-11">
+                                                        <img src="https://i.pinimg.com/736x/c6/61/e4/c661e42736b6da5748353a0d74f8dcf1.jpg"
+                                                                alt="Car 11">
+                                                </a>
+                                                <div id="window-car-11" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 11 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/1200x/40/03/b3/4003b3673874d1a9cb87e53e67bea022.jpg"
-                                                        alt="Car 13">
+                                        <!-- Car 13 (Skipped 12 in original? Keeping numbering consistent) -->
+                                        <div class="grid-item">
+                                                <a href="#window-car-13">
+                                                        <img src="https://i.pinimg.com/1200x/40/03/b3/4003b3673874d1a9cb87e53e67bea022.jpg"
+                                                                alt="Car 13">
+                                                </a>
+                                                <div id="window-car-13" class="window">
+                                                        <a href="#Cars" class="close-btn">close</a>
+                                                        <div class="window-content">
+                                                                <iframe src="car.mp4" class="window-iframe"
+                                                                        title="Car 13 View"></iframe>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
 
                                 <div id="Nature" class="genre-section">
                                         <h3>Nature</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/69/81/c2/6981c251f5c5b623f800b011553762e3.jpg"
-                                                                alt="Nature 1"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/28/d9/d6/28d9d65ba16679d6366393642f15a011.jpg"
-                                                                alt="Nature 2"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/02/59/69/0259699a168aea21ba838cd4873a1fdc.jpg"
-                                                                alt="Nature 3"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/6d/dd/fa/6dddfad99e612c9bce3dad8ac60f2354.jpg"
-                                                                alt="Nature 4"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/33/63/96/336396bd6071e0b4afd57b1a198679f7.jpg"
-                                                                alt="Nature 5"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/59/b2/43/59b243f67fe00797558fef8369f37586.jpg"
-                                                                alt="Nature 6"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/da/1c/cf/da1ccf45d6d45b2471df5bba8f7163e9.jpg"
-                                                                alt="Nature 7"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/f1/2a/66/f12a66dd8b6798407d3315ef2ccc1259.jpg"
-                                                                alt="Nature 8"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/a1/2f/ee/a12fee985d210fe84a137cb1f64a0983.jpg"
-                                                                alt="Nature9"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/94/08/10/9408102306a1bcc35363f0c90c791dca.jpg"
-                                                                alt="Nature 10"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/96/5c/71/965c71d4910d389dd1cd0d01d595c423.jpg"
-                                                                alt="Nature 11"></div>
-
+                                                <!-- Nature 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-1">
+                                                                <img src="https://i.pinimg.com/1200x/69/81/c2/6981c251f5c5b623f800b011553762e3.jpg"
+                                                                        alt="Nature 1">
+                                                        </a>
+                                                        <div id="window-nature-1" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 1 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-2">
+                                                                <img src="https://i.pinimg.com/1200x/28/d9/d6/28d9d65ba16679d6366393642f15a011.jpg"
+                                                                        alt="Nature 2">
+                                                        </a>
+                                                        <div id="window-nature-2" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 2 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-3">
+                                                                <img src="https://i.pinimg.com/736x/02/59/69/0259699a168aea21ba838cd4873a1fdc.jpg"
+                                                                        alt="Nature 3">
+                                                        </a>
+                                                        <div id="window-nature-3" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 3 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-4">
+                                                                <img src="https://i.pinimg.com/1200x/6d/dd/fa/6dddfad99e612c9bce3dad8ac60f2354.jpg"
+                                                                        alt="Nature 4">
+                                                        </a>
+                                                        <div id="window-nature-4" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 4 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-5">
+                                                                <img src="https://i.pinimg.com/736x/33/63/96/336396bd6071e0b4afd57b1a198679f7.jpg"
+                                                                        alt="Nature 5">
+                                                        </a>
+                                                        <div id="window-nature-5" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 5 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-6">
+                                                                <img src="https://i.pinimg.com/1200x/59/b2/43/59b243f67fe00797558fef8369f37586.jpg"
+                                                                        alt="Nature 6">
+                                                        </a>
+                                                        <div id="window-nature-6" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 6 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 7 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-7">
+                                                                <img src="https://i.pinimg.com/1200x/da/1c/cf/da1ccf45d6d45b2471df5bba8f7163e9.jpg"
+                                                                        alt="Nature 7">
+                                                        </a>
+                                                        <div id="window-nature-7" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 7 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 8 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-8">
+                                                                <img src="https://i.pinimg.com/1200x/f1/2a/66/f12a66dd8b6798407d3315ef2ccc1259.jpg"
+                                                                        alt="Nature 8">
+                                                        </a>
+                                                        <div id="window-nature-8" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 8 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 9 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-9">
+                                                                <img src="https://i.pinimg.com/736x/a1/2f/ee/a12fee985d210fe84a137cb1f64a0983.jpg"
+                                                                        alt="Nature 9">
+                                                        </a>
+                                                        <div id="window-nature-9" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 9 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 10 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-10">
+                                                                <img src="https://i.pinimg.com/736x/94/08/10/9408102306a1bcc35363f0c90c791dca.jpg"
+                                                                        alt="Nature 10">
+                                                        </a>
+                                                        <div id="window-nature-10" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 10 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Nature 11 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-nature-11">
+                                                                <img src="https://i.pinimg.com/736x/96/5c/71/965c71d4910d389dd1cd0d01d595c423.jpg"
+                                                                        alt="Nature 11">
+                                                        </a>
+                                                        <div id="window-nature-11" class="window">
+                                                                <a href="#Nature" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="nature.mp4" class="window-iframe"
+                                                                                title="Nature 11 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
 
                                 <div id="Architecture" class="genre-section">
                                         <h3>Architecture</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/fc/e3/fd/fce3fd5e9bf49df79265157cc3943997.jpg"
-                                                                alt="Arch 1">
+                                                <!-- Arch 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-1">
+                                                                <img src="https://i.pinimg.com/736x/fc/e3/fd/fce3fd5e9bf49df79265157cc3943997.jpg"
+                                                                        alt="Arch 1">
+                                                        </a>
+                                                        <div id="window-arch-1" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="placeholder.html"
+                                                                                class="window-iframe"
+                                                                                title="Arch 1 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/5a/19/27/5a1927b82edbeaa03259717e7b7b2deb.jpg"
-                                                                alt="Arch 2">
+                                                <!-- Arch 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-2">
+                                                                <img src="https://i.pinimg.com/1200x/5a/19/27/5a1927b82edbeaa03259717e7b7b2deb.jpg"
+                                                                        alt="Arch 2">
+                                                        </a>
+                                                        <div id="window-arch-2" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 2 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/92/49/ab/9249abae46349ddbf6b9f49051ede781.jpg"
-                                                                alt="Arch 3">
+                                                <!-- Arch 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-3">
+                                                                <img src="https://i.pinimg.com/1200x/92/49/ab/9249abae46349ddbf6b9f49051ede781.jpg"
+                                                                        alt="Arch 3">
+                                                        </a>
+                                                        <div id="window-arch-3" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 3 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/d6/5e/0b/d65e0b8026e9c738c6062f5d9476e382.jpg"
-                                                                alt="Arch 4">
+                                                <!-- Arch 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-4">
+                                                                <img src="https://i.pinimg.com/1200x/d6/5e/0b/d65e0b8026e9c738c6062f5d9476e382.jpg"
+                                                                        alt="Arch 4">
+                                                        </a>
+                                                        <div id="window-arch-4" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 4 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/cd/c3/45/cdc345028b2d04724ebce262782b08b5.jpg"
-                                                                alt="Arch 5">
+                                                <!-- Arch 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-5">
+                                                                <img src="https://i.pinimg.com/1200x/cd/c3/45/cdc345028b2d04724ebce262782b08b5.jpg"
+                                                                        alt="Arch 5">
+                                                        </a>
+                                                        <div id="window-arch-5" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 5 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/e3/f7/d8/e3f7d87cad6b8da055481c0389b62f1a.jpg"
-                                                                alt="Arch 6">
+                                                <!-- Arch 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-6">
+                                                                <img src="https://i.pinimg.com/1200x/e3/f7/d8/e3f7d87cad6b8da055481c0389b62f1a.jpg"
+                                                                        alt="Arch 6">
+                                                        </a>
+                                                        <div id="window-arch-6" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 6 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/fb/de/b0/fbdeb0c09a9b617554e81ded50a6321d.jpg"
-                                                                alt="Arch 7">
+                                                <!-- Arch 7 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-7">
+                                                                <img src="https://i.pinimg.com/736x/fb/de/b0/fbdeb0c09a9b617554e81ded50a6321d.jpg"
+                                                                        alt="Arch 7">
+                                                        </a>
+                                                        <div id="window-arch-7" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 7 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
-                                                                alt="Arch 8">
+                                                <!-- Arch 8 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-8">
+                                                                <img src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
+                                                                        alt="Arch 8">
+                                                        </a>
+                                                        <div id="window-arch-8" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 8 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/d1/00/16/d10016f7696049f86754ce7ed1cea918.jpg"
-                                                                alt="Arch 9">
+                                                <!-- Arch 9 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-9">
+                                                                <img src="https://i.pinimg.com/1200x/d1/00/16/d10016f7696049f86754ce7ed1cea918.jpg"
+                                                                        alt="Arch 9">
+                                                        </a>
+                                                        <div id="window-arch-9" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 9 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/6e/8d/22/6e8d2297c7f17326ce8acbe3b4411aef.jpg"
-                                                                alt="Arch 10">
+                                                <!-- Arch 10 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-10">
+                                                                <img src="https://i.pinimg.com/1200x/6e/8d/22/6e8d2297c7f17326ce8acbe3b4411aef.jpg"
+                                                                        alt="Arch 10">
+                                                        </a>
+                                                        <div id="window-arch-10" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 10 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/c3/e6/ea/c3e6ea9e250719460302718a3c20f144.jpg"
-                                                                alt="Arch 11">
+                                                <!-- Arch 11 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-11">
+                                                                <img src="https://i.pinimg.com/736x/c3/e6/ea/c3e6ea9e250719460302718a3c20f144.jpg"
+                                                                        alt="Arch 11">
+                                                        </a>
+                                                        <div id="window-arch-11" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 11 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
-                                                                alt="Arch 12">
+                                                <!-- Arch 12 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-12">
+                                                                <img src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
+                                                                        alt="Arch 12">
+                                                        </a>
+                                                        <div id="window-arch-12" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 12 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/ca/75/cd/ca75cd545c0446e665f76e3b038ac3d4.jpg"
-                                                                alt="Arch 13">
+                                                <!-- Arch 13 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-13">
+                                                                <img src="https://i.pinimg.com/1200x/ca/75/cd/ca75cd545c0446e665f76e3b038ac3d4.jpg"
+                                                                        alt="Arch 13">
+                                                        </a>
+                                                        <div id="window-arch-13" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 13 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
-                                                                alt="Arch 14">
+                                                <!-- Arch 14 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-arch-14">
+                                                                <img src="https://i.pinimg.com/1200x/62/22/01/622201afc92ff6074c37fb46fe3eb992.jpg"
+                                                                        alt="Arch 14">
+                                                        </a>
+                                                        <div id="window-arch-14" class="window">
+                                                                <a href="#Architecture" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="home.mp4" class="window-iframe"
+                                                                                title="Arch 14 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
                                 </div>
@@ -364,70 +804,234 @@
                                 <div id="Travel" class="genre-section">
                                         <h3>Travel</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/82/0f/a7/820fa7d61221505a529323b7d54e0ad4.jpg"
-                                                                alt="Travel 1"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/cf/80/60/cf8060f1213f30db7a57bb58fd0e8b0c.jpg"
-                                                                alt="Travel 2"></div>
-
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/66/f4/1e/66f41e6057bc11e8e97b914eae1f344a.jpg"
-                                                                alt="Travel 3"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/90/35/9a/90359afd608b1d1b0abe270336fd727f.jpg"
-                                                                alt="Travel 4"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/0c/9b/ee/0c9beedb9fd2affcd9c17a6a60bcb270.jpg"
-                                                                alt="Travel 5"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/5e/aa/bc/5eaabcf081e589428e20cd7fc6f9421a.jpg"
-                                                                alt="Travel 6"></div>
+                                                <!-- Travel 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-1">
+                                                                <img src="https://i.pinimg.com/736x/82/0f/a7/820fa7d61221505a529323b7d54e0ad4.jpg"
+                                                                        alt="Travel 1">
+                                                        </a>
+                                                        <div id="window-travel-1" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 1 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Travel 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-2">
+                                                                <img src="https://i.pinimg.com/736x/cf/80/60/cf8060f1213f30db7a57bb58fd0e8b0c.jpg"
+                                                                        alt="Travel 2">
+                                                        </a>
+                                                        <div id="window-travel-2" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 2 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Travel 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-3">
+                                                                <img src="https://i.pinimg.com/736x/66/f4/1e/66f41e6057bc11e8e97b914eae1f344a.jpg"
+                                                                        alt="Travel 3">
+                                                        </a>
+                                                        <div id="window-travel-3" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 3 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Travel 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-4">
+                                                                <img src="https://i.pinimg.com/736x/90/35/9a/90359afd608b1d1b0abe270336fd727f.jpg"
+                                                                        alt="Travel 4">
+                                                        </a>
+                                                        <div id="window-travel-4" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 4 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Travel 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-5">
+                                                                <img src="https://i.pinimg.com/736x/0c/9b/ee/0c9beedb9fd2affcd9c17a6a60bcb270.jpg"
+                                                                        alt="Travel 5">
+                                                        </a>
+                                                        <div id="window-travel-5" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 5 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Travel 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-travel-6">
+                                                                <img src="https://i.pinimg.com/736x/5e/aa/bc/5eaabcf081e589428e20cd7fc6f9421a.jpg"
+                                                                        alt="Travel 6">
+                                                        </a>
+                                                        <div id="window-travel-6" class="window">
+                                                                <a href="#Travel" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="travel.mp4" class="window-iframe"
+                                                                                title="Travel 6 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
                                 <div id="Art" class="genre-section">
                                         <h3>Art</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/ff/99/5a/ff995a85abcbe393e36a658598fcab2f.jpg"
-                                                                alt="Art 1">
+                                                <!-- Art 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-1">
+                                                                <img src="https://i.pinimg.com/736x/ff/99/5a/ff995a85abcbe393e36a658598fcab2f.jpg"
+                                                                        alt="Art 1">
+                                                        </a>
+                                                        <div id="window-art-1" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 1 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/ae/b2/61/aeb261694a26a7af97817377ecfabbaa.jpg"
-                                                                alt="Art 2">
+                                                <!-- Art 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-2">
+                                                                <img src="https://i.pinimg.com/736x/ae/b2/61/aeb261694a26a7af97817377ecfabbaa.jpg"
+                                                                        alt="Art 2">
+                                                        </a>
+                                                        <div id="window-art-2" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 2 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/eb/16/68/eb1668d6eba774864825ae26bdf66148.jpg"
-                                                                alt="Art 3">
+                                                <!-- Art 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-3">
+                                                                <img src="https://i.pinimg.com/736x/eb/16/68/eb1668d6eba774864825ae26bdf66148.jpg"
+                                                                        alt="Art 3">
+                                                        </a>
+                                                        <div id="window-art-3" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 3 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/8a/0c/4d/8a0c4d9911e72022e1857790ee3bb725.jpg"
-                                                                alt="Art 4">
+                                                <!-- Art 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-4">
+                                                                <img src="https://i.pinimg.com/736x/8a/0c/4d/8a0c4d9911e72022e1857790ee3bb725.jpg"
+                                                                        alt="Art 4">
+                                                        </a>
+                                                        <div id="window-art-4" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 4 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/23/7a/5b/237a5b6a73494da8dde3fcdb2845e073.jpg"
-                                                                alt="Art 5">
+                                                <!-- Art 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-5">
+                                                                <img src="https://i.pinimg.com/736x/23/7a/5b/237a5b6a73494da8dde3fcdb2845e073.jpg"
+                                                                        alt="Art 5">
+                                                        </a>
+                                                        <div id="window-art-5" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 5 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/37/37/be/3737be5c3e71c3ae2176274ceeebcaf0.jpg"
-                                                                alt="Art 6">
+                                                <!-- Art 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-6">
+                                                                <img src="https://i.pinimg.com/1200x/37/37/be/3737be5c3e71c3ae2176274ceeebcaf0.jpg"
+                                                                        alt="Art 6">
+                                                        </a>
+                                                        <div id="window-art-6" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 6 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/f4/f0/6e/f4f06e2e49ea63a8d24e3fd51620995f.jpg"
-                                                                alt="Art 7">
+                                                <!-- Art 7 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-7">
+                                                                <img src="https://i.pinimg.com/736x/f4/f0/6e/f4f06e2e49ea63a8d24e3fd51620995f.jpg"
+                                                                        alt="Art 7">
+                                                        </a>
+                                                        <div id="window-art-7" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 7 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/28/7b/69/287b6989d63e1067e1955517187b45a8.jpg"
-                                                                alt="Art 8">
+                                                <!-- Art 8 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-8">
+                                                                <img src="https://i.pinimg.com/1200x/28/7b/69/287b6989d63e1067e1955517187b45a8.jpg"
+                                                                        alt="Art 8">
+                                                        </a>
+                                                        <div id="window-art-8" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 8 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/76/63/50/766350dd5ce892a84d3e1bbcbb3f88f8.jpg"
-                                                                alt="Art 9">
+                                                <!-- Art 9 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-9">
+                                                                <img src="https://i.pinimg.com/736x/76/63/50/766350dd5ce892a84d3e1bbcbb3f88f8.jpg"
+                                                                        alt="Art 9">
+                                                        </a>
+                                                        <div id="window-art-9" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 9 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/d4/3a/b1/d43ab1fec284a490634bcf4f6418e2f4.jpg"
-                                                                alt="Art 10">
+                                                <!-- Art 10 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-art-10">
+                                                                <img src="https://i.pinimg.com/1200x/d4/3a/b1/d43ab1fec284a490634bcf4f6418e2f4.jpg"
+                                                                        alt="Art 10">
+                                                        </a>
+                                                        <div id="window-art-10" class="window">
+                                                                <a href="#Art" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="art.mp4" class="window-iframe"
+                                                                                title="Art 10 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
                                 </div>
@@ -435,38 +1039,117 @@
                                 <div id="Food" class="genre-section">
                                         <h3>Food</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/7f/6d/3e/7f6d3ebdca842e61864b698a277c5418.jpg"
-                                                                alt="Food 1">
+                                                <!-- Food 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-1">
+                                                                <img src="https://i.pinimg.com/1200x/7f/6d/3e/7f6d3ebdca842e61864b698a277c5418.jpg"
+                                                                        alt="Food 1">
+                                                        </a>
+                                                        <div id="window-food-1" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 1 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/04/b1/5a/04b15a8649e5dfe5eff8c5921ac3fa1a.jpg"
-                                                                alt="Food 2">
+                                                <!-- Food 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-2">
+                                                                <img src="https://i.pinimg.com/736x/04/b1/5a/04b15a8649e5dfe5eff8c5921ac3fa1a.jpg"
+                                                                        alt="Food 2">
+                                                        </a>
+                                                        <div id="window-food-2" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 2 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/12/33/b9/1233b91540a1f7ceecce09342376c8fc.jpg"
-                                                                alt="Food 3">
+                                                <!-- Food 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-3">
+                                                                <img src="https://i.pinimg.com/736x/12/33/b9/1233b91540a1f7ceecce09342376c8fc.jpg"
+                                                                        alt="Food 3">
+                                                        </a>
+                                                        <div id="window-food-3" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 3 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/0b/5e/b4/0b5eb439a0fe2c71aa7b427d3402e1ea.jpg"
-                                                                alt="Food 4">
+                                                <!-- Food 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-4">
+                                                                <img src="https://i.pinimg.com/1200x/0b/5e/b4/0b5eb439a0fe2c71aa7b427d3402e1ea.jpg"
+                                                                        alt="Food 4">
+                                                        </a>
+                                                        <div id="window-food-4" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 4 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/1200x/e5/fc/59/e5fc59c732ae0e62ba9ef1cc6e3786e7.jpg"
-                                                                alt="Food 5">
+                                                <!-- Food 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-5">
+                                                                <img src="https://i.pinimg.com/1200x/e5/fc/59/e5fc59c732ae0e62ba9ef1cc6e3786e7.jpg"
+                                                                        alt="Food 5">
+                                                        </a>
+                                                        <div id="window-food-5" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 5 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/90/16/65/9016653420ebb0c8e76d301dfd7a1c9b.jpg"
-                                                                alt="Food 6">
+                                                <!-- Food 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-6">
+                                                                <img src="https://i.pinimg.com/736x/90/16/65/9016653420ebb0c8e76d301dfd7a1c9b.jpg"
+                                                                        alt="Food 6">
+                                                        </a>
+                                                        <div id="window-food-6" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 6 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/c3/15/f2/c315f238994440a1342f971546a2ce71.jpg"
-                                                                alt="Food 7">
+                                                <!-- Food 7 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-7">
+                                                                <img src="https://i.pinimg.com/736x/c3/15/f2/c315f238994440a1342f971546a2ce71.jpg"
+                                                                        alt="Food 7">
+                                                        </a>
+                                                        <div id="window-food-7" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 7 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/8f/cb/93/8fcb93ce29984e2e264c75c5201556dc.jpg"
-                                                                alt="Food 8">
+                                                <!-- Food 8 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-food-8">
+                                                                <img src="https://i.pinimg.com/736x/8f/cb/93/8fcb93ce29984e2e264c75c5201556dc.jpg"
+                                                                        alt="Food 8">
+                                                        </a>
+                                                        <div id="window-food-8" class="window">
+                                                                <a href="#Food" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="food.mp4" class="window-iframe"
+                                                                                title="Food 8 View"></iframe>
+                                                                </div>
+                                                        </div>
                                                 </div>
                                         </div>
                                 </div>
@@ -474,43 +1157,174 @@
                                 <div id="Fashion" class="genre-section">
                                         <h3>Fashion</h3>
                                         <div class="masonry-grid">
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/da/09/f7/da09f751ceca476b80aadc63090637e5.jpg"
-                                                                alt="Fashion 1"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/0a/7e/78/0a7e78c0ed5953f100f37ae91579cda1.jpg"
-                                                                alt="Fashion 2"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/75/03/63/750363d734d476db17db23abbd05feb6.jpg"
-                                                                alt="Fashion 3"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/c1/8d/b0/c18db0b3e59cd9701528c314793ad61e.jpg"
-                                                                alt="Fashion 4"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/08/2c/d4/082cd4a8cc018a32693b2af2ce896707.jpg"
-                                                                alt="Fashion 5"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/25/f4/73/25f473642392e8a4dd57fb9e61d36e61.jpg"
-                                                                alt="Fashion 6"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/f3/26/dc/f326dcc2b1cb066fcbbcce78b71c5f42.jpg"
-                                                                alt="Fashion 7"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/0e/50/b4/0e50b461ac8c46e213bdac68b9e5b1c6.jpg"
-                                                                alt="Fashion 8"></div>
-
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/4d/cc/04/4dcc04ae720eef0f265e97d21bd41f4d.jpg"
-                                                                alt="Fashion 9"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/07/c2/6f/07c26f37a397130a2775f3001c8c9b00.jpg"
-                                                                alt="Fashion 10"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/52/58/d8/5258d8ed113d8cb21db521f1428cce9e.jpg"
-                                                                alt="Fashion 11"></div>
-                                                <div class="grid-item"><img
-                                                                src="https://i.pinimg.com/736x/a4/13/cd/a413cd0baa814cff280fae5ef0232fef.jpg"
-                                                                alt="Fashion 12"></div>
+                                                <!-- Fashion 1 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-1">
+                                                                <img src="https://i.pinimg.com/736x/da/09/f7/da09f751ceca476b80aadc63090637e5.jpg"
+                                                                        alt="Fashion 1">
+                                                        </a>
+                                                        <div id="window-fashion-1" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 1 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 2 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-2">
+                                                                <img src="https://i.pinimg.com/736x/0a/7e/78/0a7e78c0ed5953f100f37ae91579cda1.jpg"
+                                                                        alt="Fashion 2">
+                                                        </a>
+                                                        <div id="window-fashion-2" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 2 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 3 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-3">
+                                                                <img src="https://i.pinimg.com/736x/75/03/63/750363d734d476db17db23abbd05feb6.jpg"
+                                                                        alt="Fashion 3">
+                                                        </a>
+                                                        <div id="window-fashion-3" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 3 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 4 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-4">
+                                                                <img src="https://i.pinimg.com/736x/c1/8d/b0/c18db0b3e59cd9701528c314793ad61e.jpg"
+                                                                        alt="Fashion 4">
+                                                        </a>
+                                                        <div id="window-fashion-4" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 4 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 5 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-5">
+                                                                <img src="https://i.pinimg.com/736x/08/2c/d4/082cd4a8cc018a32693b2af2ce896707.jpg"
+                                                                        alt="Fashion 5">
+                                                        </a>
+                                                        <div id="window-fashion-5" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 5 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 6 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-6">
+                                                                <img src="https://i.pinimg.com/736x/25/f4/73/25f473642392e8a4dd57fb9e61d36e61.jpg"
+                                                                        alt="Fashion 6">
+                                                        </a>
+                                                        <div id="window-fashion-6" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 6 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 7 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-7">
+                                                                <img src="https://i.pinimg.com/736x/f3/26/dc/f326dcc2b1cb066fcbbcce78b71c5f42.jpg"
+                                                                        alt="Fashion 7">
+                                                        </a>
+                                                        <div id="window-fashion-7" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 7 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 8 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-8">
+                                                                <img src="https://i.pinimg.com/736x/0e/50/b4/0e50b461ac8c46e213bdac68b9e5b1c6.jpg"
+                                                                        alt="Fashion 8">
+                                                        </a>
+                                                        <div id="window-fashion-8" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 8 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 9 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-9">
+                                                                <img src="https://i.pinimg.com/736x/4d/cc/04/4dcc04ae720eef0f265e97d21bd41f4d.jpg"
+                                                                        alt="Fashion 9">
+                                                        </a>
+                                                        <div id="window-fashion-9" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 9 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 10 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-10">
+                                                                <img src="https://i.pinimg.com/736x/07/c2/6f/07c26f37a397130a2775f3001c8c9b00.jpg"
+                                                                        alt="Fashion 10">
+                                                        </a>
+                                                        <div id="window-fashion-10" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 10 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 11 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-11">
+                                                                <img src="https://i.pinimg.com/736x/52/58/d8/5258d8ed113d8cb21db521f1428cce9e.jpg"
+                                                                        alt="Fashion 11">
+                                                        </a>
+                                                        <div id="window-fashion-11" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 11 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <!-- Fashion 12 -->
+                                                <div class="grid-item">
+                                                        <a href="#window-fashion-12">
+                                                                <img src="https://i.pinimg.com/736x/a4/13/cd/a413cd0baa814cff280fae5ef0232fef.jpg"
+                                                                        alt="Fashion 12">
+                                                        </a>
+                                                        <div id="window-fashion-12" class="window">
+                                                                <a href="#Fashion" class="close-btn">close</a>
+                                                                <div class="window-content">
+                                                                        <iframe src="fashion.mp4" class="window-iframe"
+                                                                                title="Fashion 12 View"></iframe>
+                                                                </div>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
 
