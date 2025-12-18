@@ -68,6 +68,8 @@
 
                 .genre-section {
                         margin-bottom: 40px;
+                        border-bottom: 2px solid #ddd;
+                        padding-bottom: 20px;
                 }
 
                 .genre-section h3 {
@@ -80,23 +82,36 @@
                 }
 
                 .masonry-grid {
-                        column-count: 4;
-                        column-gap: 15px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 15px;
                 }
 
+
+
                 .grid-item {
-                        break-inside: avoid;
-                        margin-bottom: 15px;
                         border-radius: 16px;
                         background-color: #eee;
                 }
 
-                .grid-item img {
+
+
+                .grid-item {
+                        aspect-ratio: 2 / 3;
+                        overflow: hidden;
+                }
+
+                .grid-item img,
+                .grid-item iframe {
                         width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         display: block;
                         border-radius: 16px;
                         transition: transform 0.2s;
                 }
+
+
 
                 .genre-user {
                         background-color: transparent;
@@ -156,7 +171,7 @@
                         }
 
                         .masonry-grid {
-                                column-count: 2;
+                                grid-template-columns: repeat(2, 1fr);
                         }
                 }
 
@@ -167,7 +182,7 @@
                         }
 
                         .masonry-grid {
-                                column-count: 1;
+                                grid-template-columns: 1fr;
                         }
                 }
         </style>
@@ -238,16 +253,8 @@
                                                         alt="Car 11">
                                         </div>
                                         <div class="grid-item"><img
-                                                        src="https://in.pinterest.com/pin/1036531670495231528"
-                                                        alt="Car 12">
-                                        </div>
-                                        <div class="grid-item"><img
                                                         src="https://i.pinimg.com/1200x/40/03/b3/4003b3673874d1a9cb87e53e67bea022.jpg"
                                                         alt="Car 13">
-                                        </div>
-                                        <div class="grid-item"><img
-                                                        src="https://i.pinimg.com/1200x/50/f0/fd/50f0fdf7f828aee1df3d912eb2056f72.jpg"
-                                                        alt="Car 14">
                                         </div>
                                 </div>
 
@@ -334,6 +341,7 @@
                                                                 src="https://i.pinimg.com/1200x/6e/8d/22/6e8d2297c7f17326ce8acbe3b4411aef.jpg"
                                                                 alt="Arch 10">
                                                 </div>
+
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/c3/e6/ea/c3e6ea9e250719460302718a3c20f144.jpg"
                                                                 alt="Arch 11">
@@ -362,6 +370,7 @@
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/cf/80/60/cf8060f1213f30db7a57bb58fd0e8b0c.jpg"
                                                                 alt="Travel 2"></div>
+
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/66/f4/1e/66f41e6057bc11e8e97b914eae1f344a.jpg"
                                                                 alt="Travel 3"></div>
@@ -403,6 +412,7 @@
                                                                 src="https://i.pinimg.com/1200x/37/37/be/3737be5c3e71c3ae2176274ceeebcaf0.jpg"
                                                                 alt="Art 6">
                                                 </div>
+
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/f4/f0/6e/f4f06e2e49ea63a8d24e3fd51620995f.jpg"
                                                                 alt="Art 7">
@@ -441,6 +451,7 @@
                                                                 src="https://i.pinimg.com/1200x/0b/5e/b4/0b5eb439a0fe2c71aa7b427d3402e1ea.jpg"
                                                                 alt="Food 4">
                                                 </div>
+
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/1200x/e5/fc/59/e5fc59c732ae0e62ba9ef1cc6e3786e7.jpg"
                                                                 alt="Food 5">
@@ -487,6 +498,7 @@
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/0e/50/b4/0e50b461ac8c46e213bdac68b9e5b1c6.jpg"
                                                                 alt="Fashion 8"></div>
+
                                                 <div class="grid-item"><img
                                                                 src="https://i.pinimg.com/736x/4d/cc/04/4dcc04ae720eef0f265e97d21bd41f4d.jpg"
                                                                 alt="Fashion 9"></div>
